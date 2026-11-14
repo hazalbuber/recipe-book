@@ -1,4 +1,4 @@
-// Shape of a recipe object, plus the list of allowed categories.
+// Shape of a recipe object, plus the allowed categories.
 // (JSDoc typedef is used here because the project is plain JavaScript.)
 
 /**
@@ -12,14 +12,37 @@
  * @property {boolean} favorite     Marked as favorite or not
  */
 
-export const CATEGORIES = ['Çorba', 'Ana Yemek', 'Salata', 'Tatlı', 'İçecek'];
+export const CATEGORIES = [
+  "Kahvaltı",
+  "Çorba",
+  "Ana Yemek",
+  "Hamur İşi",
+  "Salata",
+  "Meze",
+  "Tatlı",
+  "İçecek",
+  "Atıştırmalık",
+];
+
+// Emoji shown on each recipe card, by category
+export const CATEGORY_EMOJI = {
+  Kahvaltı: "🍳",
+  Çorba: "🍲",
+  "Ana Yemek": "🍛",
+  "Hamur İşi": "🥟",
+  Salata: "🥗",
+  Meze: "🧆",
+  Tatlı: "🍰",
+  İçecek: "🥤",
+  Atıştırmalık: "🍿",
+};
 
 // An empty recipe, used to reset the form
 export const EMPTY_RECIPE = {
-  title: '',
+  title: "",
   category: CATEGORIES[0],
-  duration: '',
-  ingredients: '',
-  instructions: '',
-  favorite: false
+  duration: "",
+  ingredients: "",
+  instructions: "",
+  favorite: false,
 };
