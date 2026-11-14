@@ -1,16 +1,67 @@
-# React + Vite
+# Recipe Book
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A recipe management web app built with React, Vite and Bootstrap 5.
+Users can add, list, edit and delete their favorite recipes. All data is stored in the browser with LocalStorage.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://recipe-book-hzl.netlify.app
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Create:** add a new recipe with name, category, duration, ingredients and instructions
+- **Read:** list all recipes as cards, expand a card to see the instructions
+- **Update:** edit an existing recipe
+- **Delete:** remove a recipe after a confirmation prompt
+- **Search:** filter recipes by name or ingredient
+- **Category filter:** show recipes from a single category
+- **Favorites:** mark recipes with a star and filter by favorites
+- **Persistence:** data is kept in LocalStorage, so recipes stay after a page refresh
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- Bootstrap 5
+- LocalStorage
+- Deployed on Netlify
+
+## Screenshots
+
+### Home and add form
+
+![Home](screenshots/home.png)
+
+### Recipe list
+
+![Recipe list](screenshots/recipe-list.png)
+
+### Search
+
+![Search](screenshots/search.png)
+
+### Favorites filter
+
+![Favorites](screenshots/favorites.png)
+
+### Delete confirmation
+
+![Delete confirmation](screenshots/delete-confirm.png)
+
+## Getting Started
+
+```bash
+git clone https://github.com/KULLANICI-ADIN/recipe-book.git
+cd recipe-book
+npm install
+npm run dev
+```
+
+## Project Structure
+
+```
+src/
+  components/   reusable UI parts (RecipeForm, RecipeCard, RecipeList)
+  pages/        page components (Home)
+  interfaces/   data shapes
+```
