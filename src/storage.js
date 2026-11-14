@@ -1,10 +1,14 @@
-const STORAGE_KEY = 'recipe-book.recipes';
+import { SAMPLE_RECIPES } from "./data/sampleRecipes";
 
-// Reads all recipes from LocalStorage (returns an empty array if there is nothing or the data is broken)
+const STORAGE_KEY = "recipe-book.recipes";
+
+// Reads recipes from LocalStorage.
+// First visit (nothing stored yet): returns the sample recipes.
+// If the user deleted everything, an empty list is stored, so the samples do not come back.
 export function loadRecipes() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : [];
+    return raw === null ? SAMPLE_RECIPES : JSON.parse(raw);
   } catch {
     return [];
   }
