@@ -1,5 +1,7 @@
 # Recipe Book
 
+[Türkçe sürüm](README.tr.md)
+
 A recipe management web app built with React, Vite and Bootstrap 5.
 Users can add, list, edit and delete their favorite recipes. All data is stored in the browser with LocalStorage.
 
